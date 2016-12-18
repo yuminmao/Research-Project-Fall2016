@@ -1,0 +1,7 @@
+#Sat Dec 17 00:54:55 EST 2016
+base.0=C\:\\Users\\Stephanie\\Documents\\GitHub\\Research\\android-Camera2Raw-master\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_816de41e303a7822d162afc25aba886207cb18cc
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Stephanie\\Documents\\GitHub\\Research\\android-Camera2Raw-master\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_82168531f647a15cce6b04f576ac0ddbe38aa6e1\\classes.dex
+base.1=C\:\\Users\\Stephanie\\Documents\\GitHub\\Research\\android-Camera2Raw-master\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_82168531f647a15cce6b04f576ac0ddbe38aa6e1
+file.0=C\:\\Users\\Stephanie\\Documents\\GitHub\\Research\\android-Camera2Raw-master\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_816de41e303a7822d162afc25aba886207cb18cc\\classes.dex

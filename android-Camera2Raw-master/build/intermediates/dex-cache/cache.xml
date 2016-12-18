@@ -2,67 +2,103 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.1.1_aeaff473d3907c4d28a5ebb0437d10f955fb1557.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="6d7d803871e3203465f71a163e7af104f807b446">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.1.1_ded261d8cb9331d5b26cf5fa6faa4ef58441a8e7.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="f62e763609f65e47dc6c498760a4accf02776788">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.1.1_882c7ad56139d956f36fcaa8633f23ed533fd11d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="4add8aa95c9f4e9a2ad64b7e2bf08e97e28955c1">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-24.1.1_1867b095777b70bb7ebeb4c22e7146a2d70c1e9c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_6dac2af5795f796b6e3dc30c8abc331c0e0710e3.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v13-24.1.1_6e702bcdb86dc339fbf51c2673395b120a95fc88.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\support-annotations-24.1.1_fd10426bd1043fb4de609a5d7d75902740d5d6cd.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="1256c10604bb098490eab070d76754ac5ceab35c">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.1.1_3e39514e82cba47e391e1801194d52b20c39bf73.jar" />
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.1.1_64d10a14b5921b91137cadbaf141cb2491f42de7\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\libs\internal_impl-24.1.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Stephanie\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_fd10426bd1043fb4de609a5d7d75902740d5d6cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.1.1_5511e67af5cccc0028ef613b1234dcbc080ba40c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.1.1_94aab6e28f451f3d9ad53bf871592e5eb61fe4ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_266b3364cd425584d8fe4cb3facd2be25867f360\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2a6467e3a0eaea062b2160e3ee208c8311929b11">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_816de41e303a7822d162afc25aba886207cb18cc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9a928970e077ea0f7e68237d67682091dc31ca21">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_82168531f647a15cce6b04f576ac0ddbe38aa6e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.1.1_5b65b939728b6523d2a2c5fb56bcaa2a0a78a219\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-24.1.1_b372f4886322bdeb3b9e1f8fd68e1f6962c9700c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="ca74722504f90166103d01edcdfdb93192eb1cba">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_3e32499abd3d395e5a6c426a810b3fdfd644497b.jar" />
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_31a02875955f7ff39dc983e215a75985d28d52b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="4add8aa95c9f4e9a2ad64b7e2bf08e97e28955c1">
+        <dex dex="C:\Users\Stephanie\Documents\GitHub\Research\android-Camera2Raw-master\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-24.1.1_ff59fd514b381c1333fa5b454e959b1b4d4532cb\classes.dex" />
     </item>
 
 </items>

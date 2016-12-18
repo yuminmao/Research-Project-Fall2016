@@ -1,4 +1,5 @@
 /*
+ * Example taken from Google
  * Copyright 2015 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -7,11 +8,6 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
  */
 
 package com.example.android.camera2raw;
@@ -30,6 +26,7 @@ import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
+import android.hardware.Camera;
 import android.hardware.SensorManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCaptureSession;
@@ -66,7 +63,9 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -87,43 +86,10 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * A fragment that demonstrates use of the Camera2 API to capture RAW and JPEG photos.
- * <p/>
- * In this example, the lifecycle of a single request to take a photo is:
- * <ul>
- * <li>
- * The user presses the "Picture" button, resulting in a call to {@link #takePicture()}.
- * </li>
- * <li>
- * {@link #takePicture()} initiates a pre-capture sequence that triggers the camera's built-in
- * auto-focus, auto-exposure, and auto-white-balance algorithms (aka. "3A") to run.
- * </li>
- * <li>
- * When the pre-capture sequence has finished, a {@link CaptureRequest} with a monotonically
- * increasing request ID set by calls to {@link CaptureRequest.Builder#setTag(Object)} is sent to
- * the camera to begin the JPEG and RAW capture sequence, and an
- * {@link ImageSaver.ImageSaverBuilder} is stored for this request in the
- * {@link #mJpegResultQueue} and {@link #mRawResultQueue}.
- * </li>
- * <li>
- * As {@link CaptureResult}s and {@link Image}s become available via callbacks in a background
- * thread, a {@link ImageSaver.ImageSaverBuilder} is looked up by the request ID in
- * {@link #mJpegResultQueue} and {@link #mRawResultQueue} and updated.
- * </li>
- * <li>
- * When all of the necessary results to save an image are available, the an {@link ImageSaver} is
- * constructed by the {@link ImageSaver.ImageSaverBuilder} and passed to a separate background
- * thread to save to a file.
- * </li>
- * </ul>
- */
+
 public class Camera2RawFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
 
-    /**
-     * Conversion from screen rotation to JPEG orientation.
-     */
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
 
     static {
@@ -458,6 +424,7 @@ public class Camera2RawFragment extends Fragment
                         // taking a picture.
                         if (!isLegacyLocked()) {
                             Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
+
                             Integer awbState = result.get(CaptureResult.CONTROL_AWB_STATE);
                             if (aeState == null || awbState == null) {
                                 break;
@@ -630,6 +597,9 @@ public class Camera2RawFragment extends Fragment
         super.onResume();
         startBackgroundThread();
         openCamera();
+        ToggleButton toggle = (ToggleButton) getView().findViewById(R.id.toggleButton);
+        toggle.setChecked(false);
+
 
         // When the screen is turned off and turned back on, the SurfaceTexture is already
         // available, and "onSurfaceTextureAvailable" will not be called. In that case, we should
@@ -674,6 +644,7 @@ public class Camera2RawFragment extends Fragment
         switch (view.getId()) {
             case R.id.picture: {
                 takePicture();
+
                 break;
             }
             case R.id.info: {
@@ -695,6 +666,7 @@ public class Camera2RawFragment extends Fragment
     private boolean setUpCameraOutputs() {
         Activity activity = getActivity();
         CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
+
         if (manager == null) {
             ErrorDialog.buildErrorDialog("This device doesn't support Camera2 API.").
                     show(getFragmentManager(), "dialog");
@@ -747,6 +719,7 @@ public class Camera2RawFragment extends Fragment
 
                     mCharacteristics = characteristics;
                     mCameraId = cameraId;
+
                 }
                 return true;
             }
@@ -978,7 +951,11 @@ public class Camera2RawFragment extends Fragment
      *
      * @param builder the builder to configure.
      */
-    private void setup3AControlsLocked(CaptureRequest.Builder builder) {
+    private void setup3AControlsLocked(final CaptureRequest.Builder builder) {
+        Log.d(TAG,"setup3AControlsLocked is called");
+
+        ToggleButton toggle = (ToggleButton) getView().findViewById(R.id.toggleButton);
+
         // Enable auto-magical 3A run by camera device
         builder.set(CaptureRequest.CONTROL_MODE,
                 CaptureRequest.CONTROL_MODE_AUTO);
@@ -1002,17 +979,47 @@ public class Camera2RawFragment extends Fragment
             }
         }
 
-        // If there is an auto-magical flash control mode available, use it, otherwise default to
-        // the "on" mode, which is guaranteed to always be available.
+
         if (contains(mCharacteristics.get(
-                        CameraCharacteristics.CONTROL_AE_AVAILABLE_MODES),
+                CameraCharacteristics.CONTROL_AE_AVAILABLE_MODES),
                 CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH)) {
-            builder.set(CaptureRequest.CONTROL_AE_MODE,
-                    CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
+            Log.d(TAG,"it gets here A");
+            if(toggle!=null&&toggle.isChecked()){
+                Log.d(TAG,"it gets here C");
+                builder.set(CaptureRequest.FLASH_MODE,
+                       CaptureRequest.FLASH_MODE_TORCH);
+                //builder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
+            }else {
+                Log.d(TAG,"it gets here D");
+                builder.set(CaptureRequest.FLASH_MODE,
+                        CaptureRequest.FLASH_MODE_OFF);
+                builder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AF_MODE_AUTO);
+
+            }
         } else {
+            Log.d(TAG,"it gets here B");
             builder.set(CaptureRequest.CONTROL_AE_MODE,
                     CaptureRequest.CONTROL_AE_MODE_ON);
         }
+
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Log.d(TAG,"Toggle is on");
+                    //builder.set(CaptureRequest.FLASH_MODE,
+                            //CaptureRequest.FLASH_MODE_TORCH);
+
+                } else {
+                    Log.d(TAG,"Toggle is off");
+                   // builder.set(CaptureRequest.FLASH_MODE,
+                           // CaptureRequest.FLASH_MODE_OFF);
+
+
+
+                }
+            }
+        });
+
 
         // If there is an auto-magical white balance control mode available, use it.
         if (contains(mCharacteristics.get(
@@ -1022,6 +1029,7 @@ public class Camera2RawFragment extends Fragment
             builder.set(CaptureRequest.CONTROL_AWB_MODE,
                     CaptureRequest.CONTROL_AWB_MODE_AUTO);
         }
+
     }
 
     /**
@@ -1190,6 +1198,10 @@ public class Camera2RawFragment extends Fragment
                 // Replace the existing repeating request with one with updated 3A triggers.
                 mCaptureSession.capture(mPreviewRequestBuilder.build(), mPreCaptureCallback,
                         mBackgroundHandler);
+                Log.d(TAG,"capture 1");
+                //mCaptureSession.capture(mPreviewRequestBuilder.build(), mPreCaptureCallback,
+                        //mBackgroundHandler);
+                Log.d(TAG,"capture 2");
             } catch (CameraAccessException e) {
                 e.printStackTrace();
             }
@@ -1218,6 +1230,8 @@ public class Camera2RawFragment extends Fragment
             // Use the same AE and AF modes as the preview.
             setup3AControlsLocked(captureBuilder);
 
+
+
             // Set orientation.
             int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,
@@ -1238,7 +1252,9 @@ public class Camera2RawFragment extends Fragment
             mJpegResultQueue.put((int) request.getTag(), jpegBuilder);
             mRawResultQueue.put((int) request.getTag(), rawBuilder);
 
+
             mCaptureSession.capture(request, mCaptureCallback, mBackgroundHandler);
+            //mCaptureSession.capture(request, mCaptureCallback, mBackgroundHandler);
 
         } catch (CameraAccessException e) {
             e.printStackTrace();
