@@ -794,6 +794,8 @@ public class Camera2RawFragment extends Fragment
             e.printStackTrace();
         } catch (InterruptedException e) {
             throw new RuntimeException("Interrupted while trying to lock camera opening.", e);
+        } catch (SecurityException e) {
+            e.printStackTrace();
         }
     }
 
@@ -1385,11 +1387,56 @@ public class Camera2RawFragment extends Fragment
                     break;
                 }
                 case ImageFormat.RAW_SENSOR: {
+                    //convert to byte buffers here
                     DngCreator dngCreator = new DngCreator(mCharacteristics, mCaptureResult);
                     FileOutputStream output = null;
                     try {
                         output = new FileOutputStream(mFile);
                         dngCreator.writeImage(output, mImage);
+                        //code below meant to obtain the green channel of raw image - Abhinav Girish
+                        /*Image.Plane [] planes = mImage.getPlanes();
+                        Log.i(TAG,"length of planes array: "+planes.length);
+                        Image.Plane pixelData = planes[0];
+                        //need to convert bytebuffer to IntBuffer
+                        ByteBuffer bbuffer = pixelData.getBuffer();
+                        byte[] bytes = new byte[bbuffer.remaining()];
+
+                        Mat mat = new Mat(2988, 5312, CvType.CV_16U);
+                        mat.put(0,0,bytes);
+                        Mat greenChannel = new Mat(2988, 2656, CvType.CV_16U);
+
+                        for (int i = 0 ; i < mat.size().height; i++)
+                        {
+                            Log.v(TAG,"traversing matrix of pixels");
+                            for (int j = 0 ; i < mat.size().width; i++)
+                            {
+                                if(i % 2 == 1 && j % 2 == 1)
+                                {
+                                    greenChannel.put(i, (j+1)/2,mat.get(i,j));
+                                }
+                                else if (i % 2 == 0 && j % 2 == 0)
+                                {
+                                    greenChannel.put(i, j/2, mat.get(i,j));
+                                }
+                            }
+                        }
+
+                        IntBuffer intBuffer = bbuffer.asIntBuffer();
+                        Log.i(TAG,"reached this point: "+ intBuffer.hasArray());
+                        if (intBuffer.hasArray())
+                        {
+                            int [] intArray = intBuffer.array();
+                            int [] greens = intArray;
+                            int [] red = intArray;
+                            int [] blue = intArray;
+                            Log.i(TAG, "length of int array representing pixels" + intArray.length);
+
+                            success = true;
+                        }
+                        else{
+                            success = false;
+                        } */
+
                         success = true;
                     } catch (IOException e) {
                         e.printStackTrace();

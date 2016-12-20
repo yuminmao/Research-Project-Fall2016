@@ -2,67 +2,103 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.1.1_aeaff473d3907c4d28a5ebb0437d10f955fb1557.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="6d7d803871e3203465f71a163e7af104f807b446">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.1.1_ded261d8cb9331d5b26cf5fa6faa4ef58441a8e7.jar" />
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.1.1_449d83e829fea3ea1086503819ffac2039f3881e/classes.dex" />
     </item>
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="f62e763609f65e47dc6c498760a4accf02776788">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.1.1_882c7ad56139d956f36fcaa8633f23ed533fd11d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.1.1\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="4add8aa95c9f4e9a2ad64b7e2bf08e97e28955c1">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-24.1.1_1867b095777b70bb7ebeb4c22e7146a2d70c1e9c.jar" />
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.1.1_abfe0cc2731caa83b6befb658cb24164c9213fe5/classes.dex" />
     </item>
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
-        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_6dac2af5795f796b6e3dc30c8abc331c0e0710e3.jar" />
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.1.1_8df6fca43e98f48933cf88aa292a292a0fab0fa7/classes.dex" />
     </item>
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v13-24.1.1_6e702bcdb86dc339fbf51c2673395b120a95fc88.jar" />
-    </item>
-    <item
-        jar="C:\Users\Stephanie\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/abhinavgirish/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.1/support-annotations-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\support-annotations-24.1.1_fd10426bd1043fb4de609a5d7d75902740d5d6cd.jar" />
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.1.1_c77e7b9b1942bad92c886756e681f63000cd79ac/classes.dex" />
     </item>
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
-        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.1.1_3e39514e82cba47e391e1801194d52b20c39bf73.jar" />
+        sha1="74d210374501555e708515512e32aac5ceb89ea8">
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bf97ebc1022307d9d6beec0368b92f9b4a4fa24e/classes.dex" />
     </item>
     <item
-        jar="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\libs\internal_impl-24.1.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/support-v13/24.1.1/jars/libs/internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="ca74722504f90166103d01edcdfdb93192eb1cba">
-        <dex dex="C:\Users\Stephanie\Desktop\android-Camera2Raw-master\Application\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_3e32499abd3d395e5a6c426a810b3fdfd644497b.jar" />
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.1_9314e130de1f77cdce40aa4903ac721ddc209675/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.1.1_0e69a751d8d2a020e74002e8868b62337f3c506f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.1.1_2a0e65d945787578b94b4b8dc218c297eab8c5ac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/support-v13/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v13-24.1.1_d8be0a79c4d05c127e6bb7898b0ec79ca6fda2ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3caa73d54bd573bb966763c093b36619e604c4ad">
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_495f7bb04a8f29e95b0e2f6719fb3e927eed6ada/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="/Users/abhinavgirish/AndroidStudioProjects/Research-Project-Fall2016/android-Camera2Raw-master/Application/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.1_d5e4166b00c913c4b96c56a96255066d26bc2665/classes.dex" />
     </item>
 
 </items>

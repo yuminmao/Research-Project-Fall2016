@@ -32,6 +32,7 @@ public class CameraActivity extends Activity {
             getFragmentManager().beginTransaction()
                     .replace(R.id.container, Camera2RawFragment.newInstance())
                     .commit();
+            //Log.v(TAG,"RUNNING onCreate()");
         }
     }
 
